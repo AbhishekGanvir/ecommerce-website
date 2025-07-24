@@ -1,11 +1,11 @@
-import { cart,removeFromCart,updateDeliveryOption } from "../data/cart.js";
-import { products } from "../data/products.js"
-import { formatCurrency } from "../utils/money.js";
+import { cart,removeFromCart,updateDeliveryOption } from "../../data/cart.js";
+import { products } from "../../data/products.js"
+import { formatCurrency } from "../../utils/money.js";
 import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js'
-import {deliveryOptions} from '../data/deliveryOptions.js'
+import {deliveryOptions} from '../../data/deliveryOptions.js'
 
 
-function renderOrderSummary(){
+export function renderOrderSummary(){
 let cartSummaryHTML = '';
 
 cart.forEach((cartItem) => {
@@ -40,7 +40,7 @@ const dateString = deliveryDate.format('dddd, MMMM D');
 
   cartSummaryHTML += `<div class="cart-item-container   js-cart-item-container-${matchingProduct.id} ">
             <div class="delivery-date">
-              Delivery date:${dateString}
+              Delivery date:  ${dateString}
             </div>
 
             <div class="cart-item-details-grid">
@@ -138,4 +138,3 @@ element.addEventListener('click', () => {
 });
 }
 
-renderOrderSummary();
