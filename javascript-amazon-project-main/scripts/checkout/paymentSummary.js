@@ -52,10 +52,10 @@ let ShippingPriceCents = 0;
             <div>Order total:</div>
             <div class="payment-summary-money">₹${formatCurrency(totalCents)}</div>
           </div>
-
+<a href="orders.html"  >
           <button class="place-order-button button-primary">
             Place your order
-          </button>
+          </button></a>
         `;
         document.querySelector('.js-payment-summary').innerHTML = paymentSummaryHTML;
 }
